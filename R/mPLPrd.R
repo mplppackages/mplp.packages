@@ -1,7 +1,9 @@
 ######################################################################################
 ## mPLPrd: an R package for efficient RDD inference
 ## Authors: Giuseppe Cavaliere, Sílvia Gonçalves, Morten Ø. Nielsen, & Edoardo Zanelli
+## version: 1.0 (25.11.2025)
 ######################################################################################
+
 
 mPLPrd <- function(y, x, h, c = NULL, p = NULL, kersel = NULL, res = NULL, alpha = NULL, fast = NULL, g.loo = NULL) {
   
@@ -59,6 +61,7 @@ mPLPrd <- function(y, x, h, c = NULL, p = NULL, kersel = NULL, res = NULL, alpha
   } else if (!is.logical(fast) || length(fast) > 1) {
     stop("'fast' must be a single TRUE/FALSE")
   }
+  
   
   if (is.null(g.loo)) {
     g.loo <- FALSE
