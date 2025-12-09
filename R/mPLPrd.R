@@ -210,8 +210,6 @@ mPLPrd <- function(y, x, h, c = NULL, p = NULL, kersel = NULL, res = NULL, alpha
     if (res == "cct-hc0") {
       epshatp <- (yp - rp.pp1%*%betap.q)
       epshatm <- (ym - rm.pp1%*%betam.q)
-      
-      print(epshatp)
     } else {
       Qp.vec  <- rowSums((rp.pp1 %*% invGp.q) * (rp.pp1 * Kp.X))
       Qm.vec  <- rowSums((rm.pp1 %*% invGm.q) * (rm.pp1 * Km.X))
