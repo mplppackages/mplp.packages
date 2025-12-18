@@ -19,8 +19,22 @@ mPLPrd <- function(y, x, h, c = NULL, p = NULL, kersel = NULL,
 ########## Arguments ###########
 
 
-y            dependent variable 
-x            running variable (or forcing variable, or score)
-h            bandwidth parameter 
+y            is the dependent variable 
+
+x            is the running variable (or forcing variable, or score)
+
+h            is the bandwidth parameter (to be chosen externally)
+
+c            is the cutoff value. Default is c=0.
+
+p            is the polynomial order used for estimating the local polynomials at 
+             the left and at the right of the cutoff. It can take any odd and positive
+             value. Default is p=1.
+
+kersel       selects the kernel function used for the local polynomial estimators.
+             The possible options are "epa" (epanechnikov's), "uni" (uniform) and 
+             "tri" (triangular) kernel. Default is kersel="tri".
+      
+
 
 
